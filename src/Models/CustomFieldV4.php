@@ -92,10 +92,10 @@ class CustomFieldV4 extends AbstractModel
 
         $response = $this->postRequest("/api/v4/$elementType/custom_fields", $parameters);
 
-        if (isset($response['custom_fields'])) {
+        if (isset($response['_embedded']['custom_fields'])) {
             $result = array_map(function ($item) {
                 return $item['id'];
-            }, $response['custom_fields']);
+            }, $response['_embedded']['custom_fields']);
         } else {
             return [];
         }
