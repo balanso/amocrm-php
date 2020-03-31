@@ -26,6 +26,8 @@ use AmoCRM\Helpers\Format;
  * @property \AmoCRM\Models\Customer $customer
  * @property \AmoCRM\Models\CustomersPeriods $customers_periods
  * @property \AmoCRM\Models\CustomField $custom_field
+ * @property \AmoCRM\Models\CustomFieldV4 $custom_field_v4
+ * @property \AmoCRM\Models\CustomFieldGroupV4 $custom_field_group_v4
  * @property \AmoCRM\Models\Lead $lead
  * @property \AmoCRM\Models\Links $links
  * @property \AmoCRM\Models\Note $note
