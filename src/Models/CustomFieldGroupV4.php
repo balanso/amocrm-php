@@ -76,10 +76,10 @@ class CustomFieldGroupV4 extends AbstractModel
 
         $response = $this->postRequest("/api/v4/{$elementType}/custom_fields/groups", $parameters);
 
-        if (isset($response['_embedded']['custom_field_groups'])) {
+        if (isset($response['custom_field_groups'])) {
             $result = array_map(function ($item) {
                 return $item['id'];
-            }, $response['_embedded']['custom_field_groups']);
+            }, $response['custom_field_groups']);
 
             return count($groups) === 1 ? array_shift($result) : $result;
         }

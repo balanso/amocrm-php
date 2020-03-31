@@ -279,7 +279,7 @@ class Request
             }
         } elseif(isset($result['_embedded'])) {
             //API V4 response
-            return $result;
+            return $result['_embedded'];
         } elseif (!isset($result['response'])) {
             return false;
         }
